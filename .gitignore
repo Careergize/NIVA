@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+.next/
+coverage/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+
+# System files
+$RECYCLE.BIN/
+System Volume Information/
+DumpStack.log.tmp
+pagefile.sys
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
