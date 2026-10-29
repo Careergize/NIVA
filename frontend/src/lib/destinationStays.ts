@@ -1,4 +1,4 @@
-import type { DestinationDetail } from "./domain";
+import type { DestinationDetail, RoomStay } from "./domain";
 
 export const destinationsData: Record<string, DestinationDetail> = {
     varkala: {
@@ -505,4 +505,8 @@ export function getDestinationData(slug: string): DestinationDetail | undefined 
 
 export function getAllDestinationSlugs(): string[] {
     return Object.keys(destinationsData);
+}
+
+export function getAllStays(): RoomStay[] {
+    return Object.values(destinationsData).flatMap((dest) => dest.stays);
 }

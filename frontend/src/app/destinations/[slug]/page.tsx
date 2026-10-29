@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getDestinationData, destinationsData, getAllDestinationSlugs } from "@/lib/destinationStays";
-import DestinationStaysView from "@/components/destinationStaysView";
+import { DestinationDetailView } from "@/components/destination/DestinationDetailView";
 
 export function generateStaticParams() {
     return getAllDestinationSlugs().map(slug => ({ slug }));
@@ -41,7 +41,7 @@ export default async function DestinationPage({
     }));
 
     return (
-        <DestinationStaysView
+        <DestinationDetailView
             destination={destination}
             otherDestinations={otherDestinations}
         />
